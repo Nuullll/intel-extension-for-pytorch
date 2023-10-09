@@ -310,6 +310,10 @@ def disable_tile_as_device():
 ################################################################
 
 
+def has_jit_quantization_save():
+    return _C._is_jit_quantization_save_enabled()
+
+
 def has_xetla():
     return _C._is_xetla_enabled()
 
