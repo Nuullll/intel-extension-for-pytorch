@@ -60,7 +60,7 @@ if NOT EXIST vision (
 )
 
 if NOT EXIST intel-extension-for-pytorch (
-    git clone https://github.com/intel/intel-extension-for-pytorch.git
+    git clone https://github.com/Nuullll/intel-extension-for-pytorch.git
 )
 
 rem Checkout required branch/commit and update submodules
@@ -122,7 +122,7 @@ python setup.py bdist_wheel
 set "DISTUTILS_USE_SDK="
 for %%f in ("dist\*.whl") do python -m pip install --force-reinstall --no-deps "%%f"
 
-rem Intel® Extension for PyTorch*
+rem Intelï¿½ Extension for PyTorch*
 cd ..\intel-extension-for-pytorch
 python -m pip install -r requirements.txt
 if NOT "%AOT%"=="" (
