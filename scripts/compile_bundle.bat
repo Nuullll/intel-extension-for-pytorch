@@ -92,7 +92,7 @@ rem Compile individual component
 rem PyTorch
 cd ..\pytorch
 git stash
-git clean -f
+git clean -f -d
 for %%f in ("..\intel-extension-for-pytorch\torch_patches\*.patch") do git apply "%%f"
 python -m pip install -r requirements.txt
 call conda install -q --yes -c conda-forge libuv=1.39
